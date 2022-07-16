@@ -3,10 +3,20 @@
     <%= image_tag "logo.gif", class: "nav-icon" %>
   </div>
   <div class="nav-content">
-    <p><%= link_to "Actualités", root_path, class: "nav-link" %></p>
-    <p>NAO</p>
-    <p>Vos élus</p>
-    <p>Accords d'entreprise</p>
-    <p>Rejoignez-nous</p>
+    <div class="odd-links">
+      <p><%= link_to "Actualités", root_path, class: "navbar-odd-link" %></p>
+    </div>
+    <div class="even-links">
+      <p>NAO</p>
+    </div>
+    <div class="odd-links">
+      <p>Vos élus</p>
+    </div>
+    <div class="even-links">
+      <p>Accords d'entreprise</p>
+    </div>
+    <div class="odd-links">
+      <p>Rejoignez-nous</p>
+    </div>
   </div>
 </nav>

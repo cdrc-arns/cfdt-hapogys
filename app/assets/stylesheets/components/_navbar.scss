@@ -4,7 +4,7 @@ nav {
   align-items: center;
   background-color: #fff;
   width: 100%;
-  height: 80px;
+  height: 90px;
 }
 
 .nav-icon {
@@ -20,13 +20,35 @@ nav {
   align-items: center;
 }
 
+.navbar-odd-link {
+  color: #000000;
+  text-decoration: none;
+  transition: transform 0.4s ease-in-out;
 
-.nav-content:nth-child(2n) {
-  color: #DF5A25;
+  &:hover {
+    text-decoration: underline;
+    color: #DF5A25;
+  }
 }
 
-.nav-content:nth-child(2n+1) {
-  color: black;
+.navbar-even-link {
+  color: #DF5A25;
+  text-decoration: none;
+  transition: transform 0.4s ease-in-out;
+
+  &:hover {
+    text-decoration: underline;
+    color: #000000;
+  }
+}
+
+
+.odd-links {
+  color: #000000;
+}
+
+.even-links {
+  color: #DF5A25;
 }
 
 .nav-content p {

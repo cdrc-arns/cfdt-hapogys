@@ -1,10 +1,17 @@
 <% @articles.each do |article| %>
   <div class="card-wrapper">
     <div class="article-title">
-      <h2><%= article.title %></h2>
+      <h2><%= article.title.capitalize %></h2>
     </div>
     <div class="article-description">
       <%= article.description %>
+    </div>
+    <div class="task-btns">
+      <%= link_to "Modifier", edit_article_path(article[:id]) %>
+      <%= link_to "Supprimer",
+            article_path(article),
+            method: :delete,
+            data: { confirm: "Etes-vous sûr ?" } %>
     </div>
   </div>
 <% end %>

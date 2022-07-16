@@ -1,0 +1,20 @@
+<div class="form-container">
+  <%= simple_form_for(@article) do |f| %>:
+    <div class="form-content">
+      <div class="form-input">
+        <%= f.input :title,
+                      autofocus: true %>
+      </div>
+
+      <div class="form-input">
+        <%= f.input :description,
+                      autofocus: true %>
+      </div>
+
+
+      <div class= "form-button">
+        <%= f.button :submit, "Submit", class: "form-button-text"%>
+      </div>
+    </div>
+  <% end %>
+</div>

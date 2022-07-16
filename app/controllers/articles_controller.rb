@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+
   def show
     @article = Article.find(params[:id])
   end
@@ -8,7 +9,7 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    @tarticle = Article.find(params[:id])
+    @article = Article.find(params[:id])
   end
 
   def new
@@ -22,21 +23,21 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to article_path(@article), notice: 'Article créé avec succès'
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
   def update
-    if @article.update(article_params)
-      redirect_to article_path(@article), notice: 'Article modifié avec succès'
-    else
-      render 'edit'
-    end
+    @article = Article.find(params[:id])
+    @article.update(article_params)
+
+    redirect_to root_path
   end
 
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
+    redirect_to root_path
   end
 
   private

@@ -1,7 +1,12 @@
 <nav>
-  <p>Actualités</p>
-  <p>NAO</p>
-  <p>Vos élus</p>
-  <p>Accords d'entreprise</p>
-  <p>Rejoignez-nous</p>
+  <div class="nav-logo">
+    <%= image_tag "logo.gif", class: "nav-icon" %>
+  </div>
+  <div class="nav-content">
+    <p><%= link_to "Actualités", root_path, class: "nav-link" %></p>
+    <p>NAO</p>
+    <p>Vos élus</p>
+    <p>Accords d'entreprise</p>
+    <p>Rejoignez-nous</p>
+  </div>
 </nav>

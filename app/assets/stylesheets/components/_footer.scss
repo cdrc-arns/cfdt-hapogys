@@ -1,5 +1,21 @@
 footer {
+  width: 100%;
+  height: 80px;
   display: flex;
-  justify-content: space-around;
-  background-color: yellow;
+  justify-content: center;
+  align-items: center;
+  background-color: #DF5A25;
+}
+
+footer span {
+  margin: 10px;
+}
+
+span a {
+  text-decoration: none;
+  color: #ffff;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

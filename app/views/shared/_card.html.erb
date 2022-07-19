@@ -13,11 +13,18 @@
         </div>
       </div>
       <div class="task-btns">
-        <%= link_to "Modifier", edit_article_path(article[:id]) %>
-        <%= link_to "Supprimer",
+        <span>
+          <%= link_to image_tag("editing.png"), edit_article_path(article[:id]) %>
+        </span>
+        <span>
+          <%= link_to image_tag("delete.png"),
               article_path(article),
               method: :delete,
               data: { confirm: "Etes-vous sûr ?" } %>
+        </span>
+        <span>
+          <%= image_tag "download-pdf" %>
+        </span>
       </div>
     </div>
   </div>

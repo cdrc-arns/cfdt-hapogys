@@ -1,6 +1,8 @@
-<h1>Edit</h1>
+<div class="title">
+  <h1>Modifier "<%= @article.title.capitalize %>"</h1>
+</div>
 <div class="edit-form-container">
-  <%= simple_form_for(@article) do |f| %>:
+  <%= simple_form_for(@article) do |f| %>
     <div class="form-content">
       <div class="form-input">
         <%= f.input :title,
@@ -12,10 +14,19 @@
                       autofocus: true %>
       </div>
 
+      <div class="form-input">
+        <%= f.input :image, as: :file, label: "Ajouter une image" %>
+      </div>
+
+      <div class="form-input">
+          <%= f.input :document, as: :file, label: "Ajouter un document" %>
+        </div>
 
       <div class= "form-button">
-        <%= f.button :submit, "Submit", class: "form-button-text"%>
+        <%= f.button :submit, "Valider", class: "form-button-text"%>
       </div>
     </div>
   <% end %>
+  
+    <%= link_to "Accueil", root_path, class: "navbar-odd-link" %>
 </div>

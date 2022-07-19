@@ -1,7 +1,7 @@
 <% @articles.each do |article| %>
   <div class="card-wrapper">
     <div class="card-img">
-      <%= image_tag "tract_actu.jpg", class: "card-pic"%>
+      <%= cl_image_tag article.image.key, class: "card-pic"%>
     </div>
     <div class="card-content">
       <div class="card-text">
